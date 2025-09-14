@@ -23,19 +23,19 @@ export function calculatePortfolioPerformance(
     const performanceSummary = (percentageChange: number): string => {
     switch (true) {
         case percentageChange >= 20:
-            return `The portfolio has gained significantly with a profit of $${profitOrLoss}.`;
+            return `The portfolio has gained significantly with a profit of $${profitOrLoss.toFixed(2)}.`;
         case percentageChange >= 10 && percentageChange < 20: 
-            return `The portfolio has gained moderately with the profit of $${profitOrLoss}.`;
+            return `The portfolio has gained moderately with the profit of $${profitOrLoss.toFixed(2)}.`;
         case percentageChange >= 0.1 && percentageChange < 10:
-            return `The portfolio has gained slightly with the profit of $${profitOrLoss}.`;
+            return `The portfolio has gained slightly with the profit of $${profitOrLoss.toFixed(2)}.`;
         case percentageChange === 0:
             return `There is no change in portfolio`;
         case percentageChange >= -9.99 && percentageChange < 0:
-            return `The portfolio has lost slightly with the loss of $${profitOrLoss}.` ;   
+            return `The portfolio has lost slightly with the loss of $${profitOrLoss.toFixed(2)}.` ;   
         case percentageChange >= -19.99 && percentageChange <= -10:
-            return `The portfolio has lost moderetaly with the loss of $${profitOrLoss}.`;
+            return `The portfolio has lost moderetaly with the loss of $${profitOrLoss.toFixed(2)}.`;
         case percentageChange <= -20:
-            return `The portfolio has lost significantly with the loss of $${profitOrLoss}.`;
+            return `The portfolio has lost significantly with the loss of $${profitOrLoss.toFixed(2)}.`;
         default:
             return `No change in portfolio`;
         }
