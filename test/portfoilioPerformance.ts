@@ -22,3 +22,15 @@ describe('calculatePortfolioPerformance', () => {
         expect(result.performanceSummary).toBe('There is no change in portfolio');
     });
 });
+ 
+describe('calculatePortfolioPerformance', () => {
+    it('should calculate the case with loss', () => {
+        const result = calculatePortfolioPerformance(10000, 5000);
+ 
+        expect(result.initialInvestment).toBe(10000);
+        expect(result.currentValue).toBe(5000);
+        expect(result.profitOrLoss).toBe(-5000);
+        expect(result.percentageChange).toBe(-50);
+        expect(result.performanceSummary).toBe('The portfolio has lost significantly with the loss of $-5000.00.');
+    });   
+});
