@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "ts-node src/server.ts",
+    "build": "tsc",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -19,7 +21,12 @@
   "homepage": "https://github.com/Dilraj06/Sem--3-backend_Assignment-1#readme",
   "devDependencies": {
     "@types/express": "^5.0.3",
+    "@types/jest": "^30.0.0",
     "@types/node": "^24.4.0",
+    "@types/supertest": "^6.0.3",
+    "jest": "^29.7.0",
+    "supertest": "^7.1.4",
+    "ts-jest": "^29.4.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2"
   },
