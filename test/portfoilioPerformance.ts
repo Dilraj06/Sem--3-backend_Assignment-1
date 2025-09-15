@@ -11,3 +11,14 @@ describe('calculatePortfolioPerformance', () => {
         expect(result.performanceSummary).toBe('The portfolio has gained significantly with a profit of $2500.00.');
     });
 });
+describe('calculatePortfolioPerformance', () => {
+    it('should calculate the case with no profit', () => {
+        const result = calculatePortfolioPerformance(5000, 5000);
+ 
+        expect(result.initialInvestment).toBe(5000);
+        expect(result.currentValue).toBe(5000);
+        expect(result.profitOrLoss).toBe(0);
+        expect(result.percentageChange).toBe(0);
+        expect(result.performanceSummary).toBe('There is no change in portfolio');
+    });
+});
